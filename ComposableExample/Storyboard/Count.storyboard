@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14101" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bDr-zJ-etI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Count-->
+        <scene sceneID="UM8-D4-QCN">
+            <objects>
+                <viewController id="bDr-zJ-etI" customClass="Count" customModule="ComposableExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rWt-G2-Xpd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4o-mV-Lfj" userLabel="Count">
+                                <rect key="frame" x="162" y="314" width="50" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1sJ-wr-8Tw"/>
+                                    <constraint firstAttribute="width" constant="50" id="agT-7n-ynb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qEJ-vq-fNO">
+                                <rect key="frame" x="20" y="401" width="334" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5Z-bu-Cb9" userLabel="Push">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
+                                        <state key="normal" title="Push"/>
+                                        <connections>
+                                            <action selector="push:" destination="bDr-zJ-etI" eventType="touchUpInside" id="8or-gt-vz6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MyY-1X-5wf" userLabel="Pop">
+                                        <rect key="frame" x="0.0" y="50" width="334" height="40"/>
+                                        <state key="normal" title="Pop"/>
+                                        <connections>
+                                            <action selector="pop:" destination="bDr-zJ-etI" eventType="touchUpInside" id="agx-JJ-Qim"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pM8-qu-0Hy" userLabel="Pop all">
+                                        <rect key="frame" x="0.0" y="100" width="334" height="40"/>
+                                        <state key="normal" title="Pop all"/>
+                                        <connections>
+                                            <action selector="popAll:" destination="bDr-zJ-etI" eventType="touchUpInside" id="gsO-AH-4Wh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltM-3y-9hE" userLabel="Present">
+                                        <rect key="frame" x="0.0" y="150" width="334" height="50"/>
+                                        <state key="normal" title="Present"/>
+                                        <connections>
+                                            <action selector="present:" destination="bDr-zJ-etI" eventType="touchUpInside" id="Mre-3m-nfH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qEJ-vq-fNO" firstAttribute="centerX" secondItem="Si0-LP-z15" secondAttribute="centerX" id="8L6-tz-qla"/>
+                            <constraint firstItem="Si0-LP-z15" firstAttribute="bottom" secondItem="qEJ-vq-fNO" secondAttribute="bottom" constant="66" id="NyE-Qf-WXP"/>
+                            <constraint firstItem="K4o-mV-Lfj" firstAttribute="centerY" secondItem="rWt-G2-Xpd" secondAttribute="centerY" id="Utt-gh-Rur"/>
+                            <constraint firstItem="qEJ-vq-fNO" firstAttribute="leading" secondItem="Si0-LP-z15" secondAttribute="leading" constant="20" id="XY6-83-qxp"/>
+                            <constraint firstItem="qEJ-vq-fNO" firstAttribute="top" secondItem="K4o-mV-Lfj" secondAttribute="bottom" constant="47.5" id="yhi-4G-noo"/>
+                            <constraint firstItem="K4o-mV-Lfj" firstAttribute="centerX" secondItem="rWt-G2-Xpd" secondAttribute="centerX" id="zpO-XG-rKr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Si0-LP-z15"/>
+                    </view>
+                    <connections>
+                        <outlet property="countLabel" destination="K4o-mV-Lfj" id="gQh-pw-my4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HQ1-0o-859" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="112"/>
+        </scene>
+    </scenes>
+</document>
